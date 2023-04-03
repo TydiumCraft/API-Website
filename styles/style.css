@@ -1,0 +1,257 @@
+/*@font-face {
+    font-family: "Transport Heavy";
+    src: url("/images/transport_heavy.woff2") format("woff2");
+}*/
+
+header {
+    background-color: rgb(30, 112, 48);
+    box-shadow: 0px 2px 10px #0000003f;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    overflow-x: visible;
+}
+
+footer {
+    display: block;
+}
+
+#headerBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+#logo {
+    height: 90px;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html, body {
+    width: 100%;
+    background-color: rgb(2, 26, 2);
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+}
+
+* {
+    outline: none !important;
+    -webkit-user-drag: none;
+}
+
+button {
+    user-select: none;
+}
+
+p {
+    user-select: text;
+}
+
+#headerRightContainer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#playercountcontainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    margin-right: 10px;
+    transition: opacity 1s;
+    pointer-events: none;
+    opacity: 0;
+}
+
+#playercount {
+    font-family: "Press Start 2P", sans-serif;
+    color: #fff;
+    font-size: 30px;
+}
+
+#playercounttext {
+    display: block;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+audio {
+    display: none;
+}
+
+#playercountcontainer.show {
+    opacity: 1;
+}
+
+.hide {
+    display: none !important;
+}
+
+@media (max-width: 1000px) {
+    #logo {
+        transform: none !important;
+    }
+
+    #countdown, #console {
+        margin-top: 16px;
+    }
+}
+
+#headerLinks {
+    margin: 16px;
+}
+
+#headerLinks a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 16px;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    background-color: rgb(21, 43, 18);
+    padding-left: 60px;
+    padding-right: 60px;
+    color: #fff;
+    width: 600px;
+    max-width: calc(100vw - 30px);
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+#headerlinks a:active {
+    opacity: 0.5;
+}
+
+#hamburger {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+    display: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#hamburger:active {
+    opacity: 0.5;
+}
+
+#hamburgerOpen {
+    opacity: 0;
+    transform: rotate(90deg);
+    transition: opacity 0.25s, transform 0.25s;
+    pointer-events: none;
+}
+
+#hamburgerOpen.show {
+    opacity: 1;
+    transform: none;
+    pointer-events: all;
+}
+
+#hamburgerClose {
+    opacity: 0;
+    transform: rotate(-90deg);
+    transition: opacity 0.25s, transform 0.25s;
+    pointer-events: none;
+}
+
+#hamburgerClose.show {
+    opacity: 1;
+    transform: none;
+    pointer-events: all;
+}
+
+.hamburgerIcon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+    pointer-events: none;
+}
+
+@media (max-width: 1000px) {
+    header, #headerBar {
+        transform-style: preserve-3d;
+    }
+
+    #headerLinks {
+        position: absolute;
+        top: 100px;
+        background-color: rgb(10, 48, 16);
+        margin: 0px;
+        padding: 10px;
+        width: calc(100% - 20px);
+        opacity: 0;
+        transition: opacity 0.25s;
+        pointer-events: none;
+    }
+
+    #headerLinks.show {
+        opacity: 1;
+        transform: none;
+        pointer-events: all;
+    }
+
+    #headerLinks a {
+        display: block;
+        padding: 8px 0px 8px;
+    }
+
+    #hamburger {
+        display: block;
+    }
+
+    #logo {
+        height: 70px;
+    }
+
+    main {
+        background-color: transparent;
+        padding: 10px;
+    }
+
+    html, body {
+        background-color: rgb(21, 43, 18);
+    }
+}
+
+#statusBanner {
+    background-color: rgb(28, 99, 43);
+    color: #fff;
+    width: calc(100% - 64px);
+    padding: 8px 32px 8px;
+    display: block;
+    text-align: center;
+    transform: opacity 0.1s;
+}
+
+#statusBanner a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+h1, h2 {
+    font-family: "Montserrat";
+}

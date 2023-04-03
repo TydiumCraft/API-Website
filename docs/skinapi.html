@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--# include file="/include/head.html" -->
+    <link rel="stylesheet" href="/styles/guide.css">
+    <title>TydiumCraft - Skin API</title>
+</head>
+
+<body>
+    <!--# include file="/include/header.html" -->
+    <main>
+        <a href="/api" class="apiHomeBack">❮ Back to API home</a>
+        <h1>TydiumCraft Skin API</h1>
+        <br>
+        <span class="guide-banner deprecated">
+            <h3>If you used this API before March 4th 2022</h3>The <code>/skin</code> endpoint is now completely out of
+            service and <code>/players/skin</code> has been changed to <code>/v1/players/skin</code>. Please update your
+            scripts. No other syntax changes are nessesary.
+        </span>
+        <!--Thanks Celeranis for these bad ass looking Spans.-->
+        <span class="guide-banner warning">This page is intended for technical users who own a Geyser server.</span>
+        <br>
+        <h3 id="-what-does-it-do-">What does it do?</h3>
+        <p>The API makes it easier for your Bedrock skin to be rendered and outputted! Usually, you would have to use
+            api.geysermc.org to get your texture ID, then figure out a way to use it in your preferred skin API (we send
+            it to mc-heads). The TydiumCraft Skin API does it automatically for you. It also works with Java skins!</p>
+        <h3 id="-using-the-api-">Using the API!</h3>
+        <p>Using the API couldn&#39;t be any more simple than what it is! First off, make sure that you have the latest
+            version of Floodgate! <strong>It is RECOMMENDED that you stay on the latest version of Floodgate!</strong>
+            Then by using the UUID of your Bedrock player (Not to be confused with XUID), you can put it into this link
+            <code>https://api.tydiumcraft.net/v1/players/skin?uuid={UUID}</code> and this will give you the default
+            output of a body render, which should look something like the image below: </p>
+        <p><img src="/images/api/prerendered/body84.png" alt="Default Output"></p>
+        <p>Using the URL above will always give you the default render. There are a few more customization options to
+            choose from. To use them add an ampersand (&amp;) at the end of the URL and use one of the options below to
+            put after it. Repeat that if you want an additional option.</p>
+        <p>It should look something like this:
+            <code>https://api.tydiumcraft.net/v1/players/skin?uuid={UUID}&amp;{Option}</code></p>
+        <h3 id="-api-render-options-">API Render Options</h3>
+        <h2 id="primary-options">Primary Options</h3>
+            <p>Avatar | type=avatar</p>
+            <p><img src="/images/api/prerendered/avatar.png" alt="Avatar"></p>
+            <hr>
+            <p>Head | type=head</p>
+            <p><img src="/images/api/prerendered/head.png" alt="Head"></p>
+            <hr>
+            <p>Body | type=body</p>
+            <p><img src="/images/api/prerendered/body64.png" alt="Body"></p>
+            <hr>
+            <p>Player | type=player</p>
+            <p><img src="/images/api/prerendered/player64.png" alt="Player"></p>
+            <hr>
+            <p>Combo | type=combo</p>
+            <p><img src="/images/api/prerendered/combo.png" alt="Combo"></p>
+            <hr>
+            <p>Cape | type=cape</p>
+            <span class="guide-banner warning">This option only works for Java skins.</span>
+            <p><img src="/images/api/prerendered/cape.png" alt="Cape"></p>
+            <hr>
+            <p>Skin | type=skin
+            <p>
+            <p><img src="/images/api/prerendered/skin.png" alt="Skin"></p>
+            <hr>
+            <h2 id="additional-options">Additional Options</h3>
+                <p>Size | size=(number)
+                    Changes the image size.</p>
+                <p><img src="/images/api/prerendered/player32.png" alt="SizeSmall"> <img
+                        src="/images/api/prerendered/player64.png" alt="SizeLarge"></p>
+                <hr>
+                <p>Flip | direction=(left/right)
+                    Flips the body and head renders.</p>
+                <p><img src="/images/api/prerendered/bodyleft.png" alt="RightBody"> <img
+                        src="/images/api/prerendered/bodyright.png" alt="LeftBody"></p>
+                <p><img src="/images/api/prerendered/headleft.png" alt="RightHead"> <img
+                        src="/images/api/prerendered/headright.png" alt="LeftHead"></p>
+                <hr>
+                <p>Download | download</p>
+                <p>Instead of redirecting to mc-heads, pipe it through TydiumCraft servers for a direct download. This
+                    option will only work with type=skin. Using it on other types will result in a 403 Forbidden error.
+                </p>
+    </main>
+</body>
+
+</html>

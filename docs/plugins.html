@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--# include file="/include/head.html" -->
+    <link rel="stylesheet" href="/styles/plugins.css">
+    <title>TydiumCraft - Skin API</title>
+</head>
+
+<body>
+    <!--# include file="/include/header.html" -->
+    <main>
+        <a href="/api" class="apiHomeBack">❮ Back to API home</a>
+        <h1>TydiumCraft Skin API Plugin Usage</h1>
+        <br>
+        <span class="guide-banner deprecated">
+            <h3>If you used this API before March 4th 2022</h3>The <code>/skin</code> endpoint is now completely out of
+            service and <code>/players/skin</code> has been changed to <code>/v1/players/skin</code>. Please update your
+            scripts. No other syntax changes are nessesary.
+        </span>
+        <!--Thanks Celeranis for these bad ass looking Spans.-->
+        <span class="guide-banner warning">This page is mainly useful to technical users with a Geyser server but not
+            limited to others.</span>
+        <br>
+        <h2>Here you can find configurations for plugins to use the API.</h2>
+        <h3>
+            <li><u><a href="https://www.spigotmc.org/resources/discordsrv.18494/?__cf_chl_jschl_tk__=pmd_a2d7CwS5EX5dBgp1UFdaRrc0sGwG_nKLD7GfLHY18Js-1631208401-0-gqNtZGzNAfujcnBszQiR"
+                        style="color:rgb(255, 255, 255)">DiscordSRV</a></u> - Free
+        </h3>
+        </li>
+        <p style="font-size: 15px">Config.yml - AvatarUrl:
+            <code>https://api.tydiumcraft.net/v1/players/skin?uuid={uuid-nodashes}&size=32&type=avatar</code></p>
+        <br>
+        <h3>
+            <li><u><a href="https://github.com/NeumimTo/Pl3xMap" style="color:rgb(255, 255, 255)">Pl3xMap</a></u> - Free
+        </h3>
+        </li>
+        <p style="font-size: 15px">Config.yml - heads-url:
+            <code>https://api.tydiumcraft.net/v1/players/skin?uuid={uuid}&type=head&size=32</code></p>
+        <br>
+        <h3>
+            <li><u><a href="https://www.spigotmc.org/resources/ultrastaffchatpro.80461/"
+                        style="color:rgb(255, 255, 255)">UltraStaffChatPro</a></u> - Paid
+        </h3>
+        </li>
+        <p style="font-size: 15px">Messages.yml/Config.yml: There are multiple entries with crafatar links. Replace each
+            one with <code>https://api.tydiumcraft.net/v1/players/skin?uuid={uuid}&type=avatar</code> and after you do
+            reload the plugin. Feel free to change <code>&type=head</code> to anything else on the <a
+                href="https://tydiumcraft.net/docs/skinapi">documentation</a>.</p>

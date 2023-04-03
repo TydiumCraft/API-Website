@@ -1,0 +1,32 @@
+#errorId {
+    font-size: 160px;
+    color: #3edb49;
+    font-weight: bold;
+    display: block;
+    user-select: none;
+}
+
+#errorDescription {
+    font-size: 24px;
+    color: #7f7f7f;
+    display: block;
+    margin-top: 16px;
+}
+
+main {
+    text-align: center;
+    padding: 64px 16px 64px;
+}
+
+#errorInfo {
+    color: #7f7f7f;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-top: 24px;
+    display: block;
+}
+
+#backToHome {
+    display: inline-block;
+    margin-top: 32px;
+}

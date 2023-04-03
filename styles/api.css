@@ -1,0 +1,112 @@
+#apiBackground {
+    font-size: 48px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding: 72px 16px 72px;
+    font-family: "Montserrat";
+    background: radial-gradient(circle, rgb(30, 187, 43) 0%, rgb(41, 206, 49) 24%, rgb(39, 206, 83) 86%, rgb(23, 206, 84) 100%);
+    box-shadow: 0px -10px 100px rgba(0, 0, 0, 0.164) inset;
+    text-shadow: 0px 10px 40px rgba(0, 0, 0, 0.24);
+    text-align: center;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#apiTagline {
+    font-size: 20px;
+    margin-top: 32px;
+}
+
+.route {
+    box-shadow: 0px -10px 100px rgba(0, 0, 0, 0.164) inset;
+    display: inline-block;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 225px;
+    width: 265px;
+    margin: 32px;
+    position: relative;
+}
+
+@media (max-width: 600px) {
+    .route {
+        margin: 16px;
+    }
+}
+
+.routeImage {
+    height: 225px;
+    width: 300px;
+    transition: transform 0.75s;
+}
+
+.route:hover .routeImage {
+    transform: scale(1.1);
+}
+
+.routeLabel {
+    color: #fff;
+    top: 0;
+    right: 0;
+    font-family: "Montserrat";
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 24px;
+}
+
+#routes {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    justify-content: center;
+    display: absolute;
+}
+
+#skins-route {
+    background: radial-gradient(circle, rgba(113,186,255,1) 0%, rgba(80,172,226,1) 100%);
+}
+#info-route {
+    background: radial-gradient(circle, rgb(244 181 84) 0%, rgb(204 139 28) 100%);
+}
+#upgrade-route {
+    background: radial-gradient(circle, rgba(255,91,91,1) 0%, rgba(203,45,45,1) 100%);
+}
+#plugins-route {
+    background: radial-gradient(circle, rgb(216, 215, 206) 0%, rgb(139, 137, 137) 100%);
+}
+#source-route {
+    background: radial-gradient(circle, #1b1f23 0%, #1b1f23 100%);
+}
+#donate-route {
+    background: radial-gradient(circle, rgb(255 91 214) 0%, rgb(203 45 183) 100%);
+}
+
+#powering {
+    text-align: center;
+    font-size: 48px;
+    font-family: "Montserrat";
+    color: rgba(255, 255, 255, 0.658);
+    display: none;
+    margin-bottom: 64px;
+}
+
+#powering.show {
+    display: block;
+}
+
+#poweringNumber {
+    font-size: 86px;
+    vertical-align: middle;
+    color: #fff;
+}
+
+main {
+    width: 1000px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+}
